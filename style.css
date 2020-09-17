@@ -1,0 +1,167 @@
+:root{
+  --bg: #fcfcfc;
+  --bg-dark: #333333;
+  
+  --bg-panel: #ebebeb;
+  --bg-panel-dark: #434343;
+  
+  --color-headings: #0077ff;
+  --color-headings-dark: #3664FF;
+  
+  --color-text: #333333;
+  --color-text-dark: #B5B5B5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+
+}
+
+body{
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+
+  background-color: var(--bg-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text-dark);
+
+  padding: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header{
+  width: 600px;
+  margin-bottom: 25px;
+
+  text-align: center;
+  color: var(--color-headings-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  width: 600px;
+  border-radius: 25px;
+  background-color: var(--bg-panel-dark);
+
+  display: flex;
+}
+
+form{
+  width: 100%;
+  padding: 25px;
+}
+
+fieldset{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+fieldset:last-child{
+  margin-bottom: 0;
+}
+
+label{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select{
+  background-color: var(--bg-dark);
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: var(--color-text-dark);
+  border: 3px solid transparent;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus, select:focus{
+  border-bottom: 3px solid var(--color-headings-dark);
+}
+
+input[type=submit]{
+  background-color: var(--color-headings-dark);
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+input[type=submit]:hover{
+  opacity: 0.8;
+}
+
+hr{
+  margin: 25px 0;
+  color: var(--color-text-dark);
+}
+
+.result-container{
+  width: 100%;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-content ul li{
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.result-content ul li:last-child{
+  margin-bottom: 0px;
+}
+
+.result-content ul li span{
+  color: var(--color-headings-dark);
+}
+
+.result-container p{
+  font-size: 16px;
+}
+
+footer{
+  margin-top: 25px;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-headings-dark);
+}
+
+@media screen and (max-width:650px){
+  header{
+    width: 300px;
+  }
+  main{
+    width: 300px;
+    flex-direction: column;
+  }
+  hr{
+    margin: 0;
+  }
+  .result-container h2{
+    margin-bottom: 25px;
+  }
+  .result-container p{
+    margin-top: 25px;
+  }
+}
